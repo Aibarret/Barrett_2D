@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     float currentZRotation = 0;
+
+    public Text count;
+    int coinCount;
     
     // Start is called before the first frame update
     void Start()
@@ -76,8 +80,23 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    void incrementCount()
+    {
+        coinCount++;
+
+        count.text = "Count: " + coinCount;
+    }
+
     void Jump()
     {
         rB2D.velocity = new Vector2(rB2D.velocity.x, jumpForce);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("coin")){
+            collision.GetComponent<Coin>().disable();
+            incrementCount();
+        }
     }
 }
