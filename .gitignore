@@ -59,6 +59,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 Thumbs.db
-Barrett_2D/Library/
-Barrett_2D/Temp/
-Barrett_2D/Logs/
+2DExample/Library/
+2DExample/Temp/
+2DExample/Logs/
