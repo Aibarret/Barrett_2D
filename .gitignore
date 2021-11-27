@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Thumbs.db
+Barrett_2D/Library/
+Barrett_2D/Temp/
+Barrett_2D/Logs/
